@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Базовые атрибуты темы -->
+    <attr name="windowBackground" format="reference|color" />
+    <attr name="textColor" format="reference|color" />
+    <attr name="cardBackground" format="reference|color" />
+
+    <!-- Цветовые атрибуты -->
+    <attr name="colorPrimary" format="reference|color" />
+    <attr name="colorPrimaryDark" format="reference|color" />
+    <attr name="colorAccent" format="reference|color" />
+</resources>

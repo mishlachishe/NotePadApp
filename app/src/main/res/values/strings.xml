@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NotePadApp</string>
+    <string name="action_settings">Настройки</string>
+    <string name="title_activity_note">Заметка</string>
+    <string name="title_activity_task">Задача</string>
+    <string name="version">v1.0.0</string>
+</resources>

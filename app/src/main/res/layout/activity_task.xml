@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/acttask"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_background"
+    android:padding="16dp">
+
+    <!-- Поле названия задачи -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/title_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:hintTextColor="@color/green_light"
+        app:boxStrokeColor="?attr/colorAccent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/task_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Название задачи"
+            android:textColor="@color/dark_text"
+            android:textColorHint="@color/green_light" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Поле описания -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/desc_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_input_layout"
+        android:layout_marginTop="16dp"
+        app:hintTextColor="@color/green_light"
+        app:boxStrokeColor="?attr/colorAccent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/task_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Описание задачи"
+            android:textColor="@color/dark_text"
+            android:textColorHint="@color/green_light" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Чекбокс выполнения -->
+    <CheckBox
+        android:id="@+id/task_completed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выполнено"
+        android:textColor="@color/dark_text"
+        android:buttonTint="?attr/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/desc_input_layout"
+        android:layout_marginTop="16dp" />
+
+    <!-- Срок выполнения -->
+    <TextView
+        android:id="@+id/due_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Срок выполнения:"
+        android:textColor="@color/dark_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/task_completed"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/task_due_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите дату"
+        android:textColor="?attr/colorAccent"
+        app:layout_constraintStart_toEndOf="@id/due_date_label"
+        app:layout_constraintBaseline_toBaselineOf="@id/due_date_label"
+        android:layout_marginStart="8dp" />
+
+    <!-- Кнопка сохранения -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/save_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="360dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/save_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/save_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Сохранить"
+            android:textColor="?attr/colorAccent"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/save_icon"
+            app:layout_constraintStart_toStartOf="@id/save_icon"
+            app:layout_constraintTop_toBottomOf="@id/save_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
